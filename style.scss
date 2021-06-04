@@ -1,0 +1,81 @@
+.topNav {
+    overflow: hidden;
+    background-color: black;
+  
+    // Links within nav menu
+    a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+  
+    // Hover nav menu
+    a:hover {
+      background-color: green;
+      color: black;
+    }
+  
+    // Current active page format
+    a.active {
+      background-color: lightblue;
+      color: black;
+    }
+  
+    // Icon not displayed unless screen is correct size
+    .icon {
+      display: none;
+    }
+  }
+
+  // Media call for nav menu
+@media screen and (max-width: 600px) {
+    // Only display current page
+    .topNav a:not(:first-child) {
+      display: none;
+    }
+  
+    // Icon now visible
+    .topNav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  // Mediua call for nav menu
+  @media screen and (max-width: 600px) {
+    .topNav.responsive {
+      position: relative;
+    }
+  
+    // Display icon in top right
+    .topNav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    // Display links to other pages
+    .topNav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+  // Homepage Layout
+  .homeLayout {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: seashell;
+  }
+  
+  // Homepage profile image
+  .profileImageHome {
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
